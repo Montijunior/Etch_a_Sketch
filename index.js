@@ -1,4 +1,5 @@
 const container = document.getElementById('container');
+const color = document.getElementById('color');
 
 for (let i = 1; i <= 256; i++) {
   const element = document.createElement('div');
@@ -6,6 +7,6 @@ for (let i = 1; i <= 256; i++) {
   container.appendChild(element);
   element.addEventListener(
     'mouseenter',
-    (e) => (e.target.style.backgroundColor = '#ccc')
+    (e) => (e.target.style.backgroundColor = color.value)
   );
 }
