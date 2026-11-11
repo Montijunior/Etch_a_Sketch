@@ -13,24 +13,33 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <!-- main container -->
-    <div id="container"></div>
-    <div class="buttons">
-      <div class="colors">
-        <input type="color" name="" id="color" />
-      </div>
-      <div class="">
-        <button id="grid_size_btn">Generate Grid</button>
-      </div>
-      <div class="">
-        <button id="clear_btn">Clear</button>
-      </div>
-      <div class="">
-        <button id="rain_bow_btn">Rainbow Mode</button>
-      </div>
-      <div class="">
-        <button id="eraser_btn">Eraser</button>
-      </div>
+    <div class="app-layout">
+      <!-- Left Column: Toolbar / Controls -->
+      <aside class="sidebar">
+        <h1 class="title">Etch a Sketch</h1>
+
+        <div class="control-group">
+          <label for="color" class="btn btn-color">
+            <span>Color Picker</span>
+            <input type="color" id="color" value="#000000" />
+          </label>
+
+          <button id="rain_bow_btn" class="btn">Rainbow Mode</button>
+          <button id="eraser_btn" class="btn">Eraser</button>
+        </div>
+
+        <div class="control-group divider">
+          <button id="grid_size_btn" class="btn btn-secondary">
+            Set Grid Size
+          </button>
+          <button id="clear_btn" class="btn btn-danger">Clear Canvas</button>
+        </div>
+      </aside>
+
+      <!-- Right Column: Canvas Container -->
+      <main class="canvas-wrapper">
+        <div id="container"></div>
+      </main>
     </div>
   </body>
 </html>
