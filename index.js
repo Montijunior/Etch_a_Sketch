@@ -69,3 +69,38 @@ resetButton.addEventListener('click', function () {
 });
 
 gridSize(16);
+// Function to handle visual active state on buttons
+function updateActiveButton(mode) {
+  // Remove active class from all tool buttons
+  color.parentElement.classList.remove('active');
+  rainBowButton.classList.remove('active');
+  eraserButton.classList.remove('active');
+
+  // Highlight the selected mode
+  if (mode === 'color') {
+    color.parentElement.classList.add('active');
+  } else if (mode === 'rainbow') {
+    rainBowButton.classList.add('active');
+  } else if (mode === 'eraser') {
+    eraserButton.classList.add('active');
+  }
+}
+
+// Update your event listeners to toggle the state:
+rainBowButton.addEventListener('click', function () {
+  currentMode = 'rainbow';
+  updateActiveButton('rainbow');
+});
+
+eraserButton.addEventListener('click', function () {
+  currentMode = 'eraser';
+  updateActiveButton('eraser');
+});
+
+color.addEventListener('input', function () {
+  currentMode = 'color';
+  updateActiveButton('color');
+});
+
+// Set default active button on page load
+updateActiveButton('color');
