@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f4f4f9;
+  background-color: #f4f4f6;
   font-family: Arial, sans-serif;
 }
 
@@ -21,11 +21,11 @@ body {
   flex-wrap: wrap;
   width: 480px;
   height: 480px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .box {
   width: 30px;
   height: 30px;
   border: none;
-  background-color: #3498db;
 }
